@@ -34,10 +34,8 @@ console.warn = message => {
 
 // ⚠️ SECURITY WARNING ⚠️
 // TODO: SECURITY - Move these credentials to environment variables (.env file)
-// Firebase credentials should NEVER be hardcoded in source code.
+// Firebase credentials should NOT be hardcoded in the source code.
 // Use environment variables or Firebase configuration files instead.
-// See GitHub Actions workflows and security best practices.
-// This is critical for production deployments.
 const firebaseConfig = {
   apiKey: "****",
   authDomain: "****",
