@@ -1,0 +1,27 @@
+{
+  "name": "instagram-clone",
+  "version": "1.0.0",
+  "description": "Instagram Clone - Monorepo",
+  "private": true,
+  "scripts": {
+    "prepare": "npm run install:frontend && npm run install:admin",
+    "install:frontend": "cd frontend && SENTRYCLI_SKIP_DOWNLOAD=1 npm install --legacy-peer-deps",
+    "install:admin": "cd admin && npm install --legacy-peer-deps",
+    "build": "npm run build:frontend --if-present && npm run build:admin --if-present",
+    "build:frontend": "cd frontend && npm run build --if-present",
+    "build:admin": "cd admin && NODE_OPTIONS=--openssl-legacy-provider npm run build --if-present",
+    "test": "npm run test:frontend --if-present && npm run test:admin --if-present",
+    "test:frontend": "cd frontend && npm test --if-present",
+    "test:admin": "cd admin && CI=true npm test -- --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikecaputowwt/InstagramClone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikecaputowwt/InstagramClone/issues"
+  },
+  "homepage": "https://github.com/mikecaputowwt/InstagramClone#readme"
+}
